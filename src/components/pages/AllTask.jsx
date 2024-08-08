@@ -3,7 +3,7 @@ import { useTaskProvider } from '../../context/TaskProvider';
 import TaskCard from './TaskCard';
 
 function AllTask() {
-    const { fetchTask, loading, error } = useContext(useTaskProvider);
+    const { fetchTask, loading, error } = useTaskProvider();
     const [task,setTask]=useState([])
     useEffect(() => {
        const list= fetchTask();
