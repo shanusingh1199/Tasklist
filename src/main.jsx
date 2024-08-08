@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Home from './components/pages/Home.jsx'
+import { TaskProvider } from './context/TaskProvider.jsx'
 
 
 const router =createBrowserRouter(
@@ -22,7 +23,10 @@ const router =createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <TaskProvider>
+
     <RouterProvider router={router}>
     </RouterProvider>
+    </TaskProvider>
   </StrictMode>,
 )
